@@ -3,7 +3,7 @@ const router = require("express").Router();
 // require modals
 const { Post, User } = require("../../models");
 // require authority
-// const withAuth = require('../../utils/auth');
+const withAuth = require('../../utils/auth');
 
 // GET route for all comments
 router.get("/", (req, res) => {
