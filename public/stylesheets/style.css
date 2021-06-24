@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: darkgrey;
+    color: blanchedalmond;
+}
+
+/* Applying styles to header */
+header {
+    padding: 20px 35px;
+    background-image: linear-gradient(black, darkgrey);
+}
+
+header h2 {
+    padding: 10px 10px;
+    display: inline;
+    background-color: blanchedalmond;
+    border: 1px solid black;
+    color: rgb(29, 26, 26);
+    float: right;
+    margin-top: 5px;
+}
+
+/* Applying styles to body */
+section {
+    padding: 175px 300px;
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-bottom: 150px;
+    background-color: black;
+    text-align: center;
+    font-size: 150%;
+    border: 2px solid blanchedalmond;
+}
