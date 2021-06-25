@@ -6,14 +6,14 @@
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: darkgrey;
+    background-image: url("../assets/library.jpg");
     color: blanchedalmond;
 }
 
 /* Applying styles to header */
 header {
     padding: 20px 35px;
-    background-image: linear-gradient(black, darkgrey);
+    background-image: linear-gradient(blanchedalmond, black);
 }
 
 header h2 {
@@ -21,7 +21,7 @@ header h2 {
     display: inline;
     background-color: blanchedalmond;
     border: 1px solid black;
-    color: rgb(29, 26, 26);
+    color:black;
     float: right;
     margin-top: 5px;
 }
