@@ -13,17 +13,20 @@ body {
 /* Applying styles to header */
 header {
     padding: 20px 35px;
-    background-image: linear-gradient(blanchedalmond, black);
+    background-image: linear-gradient(black, blanchedalmond);
 }
 
-header h2 {
+header button {
     padding: 10px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
     display: inline;
     background-color: blanchedalmond;
-    border: 1px solid black;
+    border: 3px solid black;
     color:black;
     float: right;
     margin-top: 5px;
+    margin-left: 5px;
 }
 
 /* Applying styles to body */
@@ -37,4 +40,9 @@ section {
     text-align: center;
     font-size: 150%;
     border: 2px solid blanchedalmond;
+}
+
+.card-body {
+    background-color: blanchedalmond;
+    border: 3px solid black;
 }
