@@ -7,8 +7,8 @@ async function newNoteHandler(event) {
   const response = await fetch("/api/posts", {
     method: "POST",
     body: JSON.stringify({
-      notesTitle,
-      notesText,
+      title,
+      post_text,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -23,6 +23,4 @@ async function newNoteHandler(event) {
   }
 }
 
-document
-  .querySelector(".new-post-form")
-  .addEventListener("submit", newNoteHandler);
+document.getElementById("save-note").addEventListener("click", newNoteHandler);
