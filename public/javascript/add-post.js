@@ -1,8 +1,8 @@
 async function newNoteHandler(event) {
   event.preventDefault();
 
-  const notesTitle = document.getElementById("note-title").value;
-  const notesText = document.getElementById("note-text").value;
+  const title = document.getElementById("note-title").value;
+  const post_text = document.getElementById("note-text").value;
 
   const response = await fetch("/api/posts", {
     method: "POST",
