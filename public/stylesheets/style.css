@@ -6,17 +6,13 @@
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url("../assets/library.jpg");
     color: blanchedalmond;
+    background-image: url(../assets/library.jpg);
 }
 
 /* Applying styles to header */
-header {
-    padding: 20px 35px;
-    background-image: linear-gradient(black, blanchedalmond);
-}
 
-header button {
+nav button {
     padding: 10px 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
@@ -31,18 +27,40 @@ header button {
 
 /* Applying styles to body */
 section {
-    padding: 175px 300px;
+    background-image: url("../assets/library.jpg"); 
+    /* padding: 100px 250px;
     margin-top: 100px;
     margin-right: 150px;
     margin-left: 150px;
     margin-bottom: 150px;
-    background-color: black;
-    text-align: center;
+    /* background-color: black; */
+    /*text-align: center;
     font-size: 150%;
-    border: 2px solid blanchedalmond;
+    border: 2px solid blanchedalmond;  */
+}
+
+section h1 {
+    font-size: 150%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blanchedalmond;
+}
+
+section h2 {
+    color: blanchedalmond;
 }
 
 .card-body {
     background-color: blanchedalmond;
     border: 3px solid black;
+}
+
+.center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
 }
