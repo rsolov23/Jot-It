@@ -20,21 +20,12 @@ body {
 .navbar-item {
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    float: right;
+    display: inline;
 }
 
-nav button {
-    padding: 10px 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    display: inline;
-    background-color: white;
-    border: 3px solid black;
-    color:black;
-    float: right;
-    margin-top: 5px;
-    margin-left: 5px;
-}
+.nav-link {
+    color: black;
+  }
 
 .center {
     position: absolute;
