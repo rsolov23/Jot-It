@@ -1,5 +1,5 @@
-const accountSid = "AC4dfc40ad240f84c2d018bc921fe57667";
-const authToken = "78b8a0724e4345d6694cdda38641cff9";
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
 // client.messages
@@ -7,5 +7,5 @@ const client = require("twilio")(accountSid, authToken);
 //   .then((message) => console.log(message));
 
 client.validationRequests
-    .create({friendlyName: "Nathanael", phoneNumber: '+12544054908'})
-    .then(validation_request => console.log(validation_request))
+  .create({ friendlyName: "Nathanael", phoneNumber: "+12544054908" })
+  .then((validation_request) => console.log(validation_request));

@@ -3,11 +3,11 @@ const router = require("express").Router();
 // require modals
 const { Post, User } = require("../../models");
 // require authority
-const withAuth = require('../../utils/auth');
+const withAuth = require("../../utils/auth");
 //Twilio for sharing purposes maybe?
-const accountSid = "AC4dfc40ad240f84c2d018bc921fe57667";
-const authToken = "78b8a0724e4345d6694cdda38641cff9";
-const client = require("twilio")(accountSid, authToken)
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = require("twilio")(accountSid, authToken);
 // GET route for all comments
 router.get("/", (req, res) => {
   Post.findAll({
@@ -69,59 +69,59 @@ router.post("/", withAuth, (req, res) => {
 });
 
 // PUT route to update a post (if logged in)
-router.put('/:id', withAuth, (req, res) => {
-    Post.update(
-        {
-            title: req.body.title,
-            post_text: req.body.post_text
-        },
-        {
-            where: {
-                id: req.params.id,
-            }
-        }
-    )
+router.put("/:id", withAuth, (req, res) => {
+  Post.update(
+    {
+      title: req.body.title,
+      post_text: req.body.post_text,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  )
     .then((dbPostData) => {
-        if (!dbPostData) {
-            res.status(404).json({message: "No post found with this id" });
-            return;
-        }
-        res.json(dbPostData);
+      if (!dbPostData) {
+        res.status(404).json({ message: "No post found with this id" });
+        return;
+      }
+      res.json(dbPostData);
     })
     .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 
 // DELETE route to delete posts
-router.delete('/:id', withAuth, (req, res) => {
-    Post.destroy({
-        where: {
-            id: req.params.id,
-        },
-    })
+router.delete("/:id", withAuth, (req, res) => {
+  Post.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
     .then((dbPostData) => {
-        if (!dbPostData) {
-            res.status(404).json({ message: "No post found with this id" });
-            return;
-        }
-        res.json(dbPostData);
+      if (!dbPostData) {
+        res.status(404).json({ message: "No post found with this id" });
+        return;
+      }
+      res.json(dbPostData);
     })
     .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 
 router.get("/share", (req, res) => {
-  let data ="This is a message";
+  let data = "This is a message";
 
   client.messages
     .create({ body: data, from: "+19734255288", to: "+18303856947" })
-    .then(message => console.log(message))
+    .then((message) => console.log(message));
 
-    res.json("cats")
-})
+  res.json("cats");
+});
 // module exports
 module.exports = router;
