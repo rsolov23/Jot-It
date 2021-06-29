@@ -1,4 +1,4 @@
-<!-- ![A screenshot of the web page](/public/assets/ss.jpg)
+![A screenshot of the web page](/public/assets/ss2.png)
 
 <details open="open">
   <summary>Table of Contents</summary>
@@ -21,7 +21,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
-    
+
   </ol>
 </details>
 
@@ -48,4 +48,4 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-## Acknowledgements -->
+## Acknowledgements
