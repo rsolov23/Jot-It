@@ -28,31 +28,31 @@ router.get("/", (req, res) => {
 });
 
 // GET route for one post
-// router.get("/:id", (req, res) => {
-//   Post.findOne({
-//     where: {
-//       id: req.params.id,
-//     },
-//     attributes: ["id", "title", "post_text", "created_at"],
-//     include: [
-//       {
-//         model: User,
-//         attributes: ["username"],
-//       },
-//     ],
-//   })
-//     .then((dbPostData) => {
-//       if (!dbPostData) {
-//         res.status(404).json({ message: "No post found with this id" });
-//         return;
-//       }
-//       res.json(dbPostData);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+router.get("/:id", (req, res) => {
+  Post.findOne({
+    where: {
+      id: req.params.id,
+    },
+    attributes: ["id", "title", "post_text", "created_at"],
+    include: [
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
+    .then((dbPostData) => {
+      if (!dbPostData) {
+        res.status(404).json({ message: "No post found with this id" });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // POST route to create a new post
 router.post("/", withAuth, (req, res) => {

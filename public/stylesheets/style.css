@@ -5,10 +5,15 @@
   }
   
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
-    background-image: url("../assets/typewriter2.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../assets/typewriter.jpg");
+    background-size: cover;
+    background-position: center; */
+    background: url(../assets/typewriter3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
