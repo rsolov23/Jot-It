@@ -49,7 +49,7 @@ router.get("/edit/:id", (req, res) => {
     .then((dbPostData) => {
       if (dbPostData) {
         const post = dbPostData.get({ plain: true });
-        res.render("dashboard", {
+        res.render("edit-post", {
           post,
           loggedIn: req.session.loggedIn,
           style: 'dbstyle.css'

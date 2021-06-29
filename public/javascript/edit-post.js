@@ -1,8 +1,8 @@
 async function editFormHandler(event) {
   event.preventDefault();
 
-  const title = document.getElementById("note-title").value;
-  const post_text = document.getElementById("note-text").value;
+  const title = document.getElementById("post-title").value.trim();
+  const post_text = document.getElementById("post-text").value.trim();
 
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
@@ -20,10 +20,10 @@ async function editFormHandler(event) {
   if (response.ok) {
     //Not sure if we should change location or stay on same page and just say note submitted
 
-    document.location.replace("/dashboard");
+    document.location.replace("/dashboard/");
   } else {
     alert(response.statusText);
   }
 }
 
-document.getElementById("edit-note").addEventListener("submit", editFormHandler);
+document.getElementById("save-post").addEventListener("click", editFormHandler);
