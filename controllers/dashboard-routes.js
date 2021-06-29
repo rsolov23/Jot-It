@@ -7,6 +7,8 @@ const withAuth = require("../utils/auth");
 
 // GET route all posts if logged in
 router.get("/", withAuth, (req, res) => {
+  console.log(req.session);
+  console.log('=====================');
   Post.findAll({
     where: {
       user_id: req.session.user_id,
@@ -43,7 +45,7 @@ router.get("/edit/:id", (req, res) => {
     .then((dbPostData) => {
       if (dbPostData) {
         const post = dbPostData.get({ plain: true });
-        res.render("edit-post", {
+        res.render("dashboard", {
           post,
           loggedIn: req.session.loggedIn,
         });

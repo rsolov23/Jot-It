@@ -13,6 +13,13 @@ body {
     serif;
   font-weight: bold;
 }
+.indent-1 {
+  float: left;
+}
+.indent-1 section {
+  width: 50%;
+  float: left;
+}
 /*makes span fault bold*/
 span {
   font-weight: bold;
