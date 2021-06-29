@@ -42,3 +42,8 @@ body {
     width: 350px;
     height: 350px;
 }
+
+.login-form {
+    background-color: #ECECEE;
+    opacity: 90%;
+}
