@@ -3,6 +3,7 @@ const router = require("express").Router();
 router.get("/", (req, res) => {
   res.render("homepage", {
     loggedIn: req.session.loggedIn,
+    style: 'style.css'
   });
 });
 
@@ -12,7 +13,9 @@ router.get("/login", (req, res) => {
     return;
   }
 
-  res.render("login");
+  res.render("login", {
+    style: 'style.css'
+  });
 });
 
 module.exports = router;

@@ -23,7 +23,11 @@ router.get("/", withAuth, (req, res) => {
   })
     .then((dbPostData) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("dashboard", { posts, loggedIn: true });
+      res.render("dashboard", { 
+        posts, 
+        loggedIn: true,
+        style: 'dbstyle.css' 
+      });
     })
     .catch((err) => {
       console.log(err);
@@ -48,6 +52,7 @@ router.get("/edit/:id", (req, res) => {
         res.render("dashboard", {
           post,
           loggedIn: req.session.loggedIn,
+          style: 'dbstyle.css'
         });
       } else {
         res.status(404).end();
