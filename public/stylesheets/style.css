@@ -15,6 +15,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif;
+  font-weight: bold;
 }
 
 /* Applying styles to header */
