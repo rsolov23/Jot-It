@@ -1,8 +1,8 @@
 async function newNoteHandler(event) {
   event.preventDefault();
 
-  const title = document.getElementById("note-title").value;
-  const post_text = document.getElementById("note-text").value;
+  const title = document.getElementById("note-title").value.trim();
+  const post_text = document.getElementById("note-text").value.trim();
 
   const response = await fetch("/api/posts", {
     method: "POST",
@@ -23,4 +23,4 @@ async function newNoteHandler(event) {
   }
 }
 
-document.getElementById("save-note").addEventListener("submit", newNoteHandler);
+document.getElementById("save-note").addEventListener("click", newNoteHandler);

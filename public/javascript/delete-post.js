@@ -16,4 +16,6 @@ async function deleteFormHandler(event) {
   }
 }
 
-document.getElementById("delete-note").addEventListener("click");
+document
+  .getElementById("delete-note")
+  .addEventListener("click", deleteFormHandler);

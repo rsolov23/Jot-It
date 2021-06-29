@@ -19,34 +19,35 @@
           /></a>
 
         <ul id="myUL">
+          {{#each posts as |post|}}
+          <li>
+            <a
+              href="/dashboard/edit/{{post.id}}"
+              class="list-group-item list-group-item-action list-group-horizontal-xl"
+            >{{ post.title }}<i class="fas fa-pen" id="edit-note"></i><i class="fas fa-share-alt" id="share"></i><i
+                class="far fa-minus-square"
+                id="delete-note"
+              ></i></a>
+          </li>
+         {{/each}}
+          {{!-- <li>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action list-group-horizontal-xl"
+            >test<i class="fas fa-pen" id="edit-note"></i><i class="fas fa-share-alt" id="share"></i><i
+                class="far fa-minus-square"
+                id="delete-note"
+              ></i></a>
+          </li>
           <li>
             <a
               href="#"
               class="list-group-item list-group-item-action list-group-horizontal-xl"
-            >Note 1<i class="fas fa-share-alt" id="share"></i><i
+            >sample 3<i class="fas fa-pen" id="edit-note"></i><i class="fas fa-share-alt" id="share"></i><i
                 class="far fa-minus-square"
-                id="trash"
+                id="delete-note"
               ></i></a>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              class="list-group-item list-group-item-action list-group-horizontal-xl"
-            >test<i class="fas fa-share-alt" id="share"></i><i
-                class="far fa-minus-square"
-                id="trash"
-              ></i></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="list-group-item list-group-item-action list-group-horizontal-xl"
-            >sample 3<i class="fas fa-share-alt" id="share"></i><i
-                class="far fa-minus-square"
-                id="trash"
-              ></i></a>
-          </li>
+          </li> --}}
         </ul>
       </div>
 
@@ -58,12 +59,13 @@
         <div class="card" style="width: 42rem; opacity: 95%">
           <div class="card-body" id="your-notes">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Create a
+              <label for="post-title" class="form-label">Create a
                 New Note</label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleFormControlInput1"
+                id="post-title"
+                name="post-title"
                 placeholder="Title"
               />
             </div>
@@ -75,7 +77,7 @@
           <div class="card-body">
             <div class="mb-3">
               <label
-                for="exampleFormControlTextarea1"
+                for="post-text"
                 class="form-label"
               ></label>
               <div class="sample-toolbar">
@@ -91,16 +93,12 @@
                 ><span class="fa fa-list fa-fw"></span></a>
               </div>
 
-              <div class="editor" id="sampleeditor"></div>
+              <div class="editor" id="sampleeditor">
+                
+              </div>
             </div>
-            <button class="save-btn">Save</button>
+            <button class="save-btn" id="save-note">Save</button>
           </div>
-<<<<<<< HEAD
-        </section>
-      </section>
-    </div>
-  </body>
-=======
         </div>
       </div>
     </section>
@@ -109,4 +107,3 @@
 <script src="/javascript/dashboard.js"></script>
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
->>>>>>> feature/dashboard-handlebars
