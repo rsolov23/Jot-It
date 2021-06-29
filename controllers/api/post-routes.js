@@ -4,7 +4,10 @@ const router = require("express").Router();
 const { Post, User } = require("../../models");
 // require authority
 const withAuth = require('../../utils/auth');
-
+//Twilio for sharing purposes maybe?
+const accountSid = "AC4dfc40ad240f84c2d018bc921fe57667";
+const authToken = "78b8a0724e4345d6694cdda38641cff9";
+const client = require("twilio")(accountSid, authToken)
 // GET route for all comments
 router.get("/", (req, res) => {
   Post.findAll({
@@ -111,5 +114,14 @@ router.delete('/:id', withAuth, (req, res) => {
     });
 });
 
+router.get("/share", (req, res) => {
+  let data ="This is a message";
+
+  client.messages
+    .create({ body: data, from: "+19734255288", to: "+18303856947" })
+    .then(message => console.log(message))
+
+    res.json("cats")
+})
 // module exports
 module.exports = router;

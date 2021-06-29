@@ -3,46 +3,42 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+  
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url("../assets/library.jpg");
-    color: blanchedalmond;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    background-image: url("../assets/typewriter.jpg");
+    background-size: cover;
+    background-position: center; */
+    background: url(../assets/typewriter3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Applying styles to header */
-header {
-    padding: 20px 35px;
-    background-image: linear-gradient(black, blanchedalmond);
+.navbar-brand {
+    color: black;
 }
 
-header button {
-    padding: 10px 10px;
+.navbar-item {
+    color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
     display: inline;
-    background-color: blanchedalmond;
-    border: 3px solid black;
-    color:black;
-    float: right;
-    margin-top: 5px;
-    margin-left: 5px;
 }
 
-/* Applying styles to body */
-section {
-    padding: 175px 300px;
-    margin-top: 100px;
-    margin-right: 150px;
-    margin-left: 150px;
-    margin-bottom: 150px;
-    background-color: black;
-    text-align: center;
-    font-size: 150%;
-    border: 2px solid blanchedalmond;
-}
+.nav-link {
+    color: black;
+  }
 
-.card-body {
-    background-color: blanchedalmond;
-    border: 3px solid black;
+.center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
 }
