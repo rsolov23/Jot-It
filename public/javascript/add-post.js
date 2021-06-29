@@ -1,7 +1,7 @@
 async function newNoteHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector("input[name='post-title']").value.trim();
+  const title = document.getElementById("post-title").value.trim();
   const post_text = document.getElementById("post-text").value.trim();
 
   const response = await fetch("/api/posts", {
