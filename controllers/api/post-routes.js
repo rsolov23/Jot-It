@@ -121,7 +121,7 @@ router.get("/share", (req, res) => {
     .create({ body: data, from: "+19734255288", to: "+18303856947" })
     .then((message) => console.log(message));
 
-  res.json("cats");
+  res.json("note title");
 });
 // module exports
 module.exports = router;

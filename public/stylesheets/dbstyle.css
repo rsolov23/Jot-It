@@ -1,0 +1,122 @@
+/*background image style*/
+body {
+  background: url(./images/typewriter2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 70%;
+  color: #424244;
+  /* text-shadow: 1px 1px 1px #cfcfd1; */
+  background-color: #f8f8ff;
+  font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif;
+  font-weight: bold;
+}
+/*makes span fault bold*/
+span {
+  font-weight: bold;
+}
+/*puts space under dashboard title*/
+.notes {
+  padding-top: 2.5%;
+}
+/*styles dashboard title*/
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  padding-bottom: 15%;
+  color: #424244;
+  /* text-shadow: 1px 1px 1px #cfcfd1; */
+}
+/*hover text style*/
+body:hover {
+  text-shadow: 2px 2px 4px #9e9995;
+}
+/*padding for note tile list and search bar*/
+#note-title {
+  padding-left: 8%;
+  /* border-right: 5px solid #545643 ; */
+}
+/*icon colors*/
+.fa {
+  color: #424244;
+}
+/*card colors*/
+.list-group-item,
+.card-body {
+  background-color: #ececee;
+  opacity: 95%;
+}
+/**/
+/* #your-notes {
+      text-align: center;
+      font-style: oblique;
+      font-weight: bolder;
+      font-size: 24;
+    } */
+/*save button styles*/
+.save-btn {
+  background-color: #7b7a76;
+  float: right;
+}
+/*save button style*/
+button {
+  transition: all 0.5s ease;
+  color: #fff;
+  border: 3px solid white;
+
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+}
+/*save button hover*/
+button:hover {
+  color: #001f3f;
+  background-color: #fff;
+}
+/*share icon positioning*/
+#share {
+  float: right;
+}
+/*delete icon positioning*/
+#trash {
+  float: right;
+  padding-right: 5px;
+}
+/*search bar positioning*/
+#search {
+  padding-right: 15px;
+}
+/*toolbar style*/
+.editor {
+  border: solid 1px #ccc;
+  padding: 20px;
+  min-height: 200px;
+}
+/*toolbar style*/
+.sample-toolbar {
+  border: solid 1px #ddd;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 3px;
+}
+/*toolbar style*/
+.sample-toolbar > span {
+  cursor: pointer;
+}
+/*toolbar style*/
+.sample-toolbar > span:hover {
+  text-decoration: underline;
+}
+/*saved noted style without bullets*/
+#myUL,
+.ul {
+  list-style-type: none;
+  padding-left: 0%;
+}

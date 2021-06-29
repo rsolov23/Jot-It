@@ -1,63 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylesheets/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
     <title>Jot It</title>
-</head>
-
-<body>
-
-<!--Sign In Bar-->
+  </head>
+  <body>
     <header>
-    <h1>Jot It</h1>
-    <button type="button">Sign Out</button> 
+      <!-- <nav class="navbar navbar-expand-sm">
+        <h4>Jot It</h4>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Sign Up </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Login </a>
+          </li>
+        </ul>
+      </nav> -->
+      <nav class="navbar navbar-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Jot It</span>
+
+          <span class="navbar-brand mb-0 h1">Log Out</span>
+        </div>
+      </nav>
+      <h1>Dashboard</h1>
     </header>
+    <div class="notes">
+      <style>
+        .indent-1 {
+          float: left;
+        }
+        .indent-1 section {
+          width: 50%;
+          float: left;
+        }
+      </style>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">About Academia Corner</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
+      <section class="indent-1">
+        <!-- Section 1 -->
+
+        <section id="note-title">
+          <div class="list-group-item">
+            <a
+              href="#"
+              class="
+                list-group-item list-group-item-action list-group-horizontal-xl
+              "
+              ><i class="fas fa-search" id="search"></i
+              ><input
+                type="text"
+                id="myInput"
+                onkeyup="myFunction()"
+                placeholder="Search"
+            /></a>
+
+            <ul id="myUL">
+              <li>
+                <a
+                  href="#"
+                  class="
+                    list-group-item
+                    list-group-item-action
+                    list-group-horizontal-xl
+                  "
+                  >Note 1<i class="fas fa-share-alt" id="share"></i
+                  ><i class="far fa-minus-square" id="trash"></i
+                ></a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="
+                    list-group-item
+                    list-group-item-action
+                    list-group-horizontal-xl
+                  "
+                  >test<i class="fas fa-share-alt" id="share"></i
+                  ><i class="far fa-minus-square" id="trash"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="
+                    list-group-item
+                    list-group-item-action
+                    list-group-horizontal-xl
+                  "
+                  >sample 3<i class="fas fa-share-alt" id="share"></i
+                  ><i class="far fa-minus-square" id="trash"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <!-- 
+          <script>
+            function myFunction() {
+              // Declare variables
+              var input, filter, ul, li, a, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              ul = document.getElementById("myUL");
+              li = ul.getElementsByTagName("li");
+
+              // Loop through all list items, and hide those who don't match the search query
+              for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                } else {
+                  li[i].style.display = "none";
+                }
+              }
+            }
+       </script> -->
+        </section>
+
+        <!-- Section 2 -->
+        <section id="create">
+          <div class="col-sm">
+            <div class="card" style="width: 42rem; opacity: 95%">
+              <div class="card-body" id="your-notes">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Create a New Note</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Title"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Why Post With Academia Corner</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">How To Post and Save</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-          </div>
-        </div>
-      </div>
+          <div class="col-sm">
+            <div class="card" style="width: 42rem; opacity: 95%">
+              <div class="card-body">
+                <div class="mb-3">
+                  <label
+                    for="exampleFormControlTextarea1"
+                    class="form-label"
+                  ></label>
+                  <div class="sample-toolbar">
+                    <a href="javascript:void(0)" onclick="format('bold')"
+                      ><span class="fa fa-bold fa-fw"></span
+                    ></a>
+                    <a href="javascript:void(0)" onclick="format('italic')"
+                      ><span class="fa fa-italic fa-fw"></span
+                    ></a>
+                    <a
+                      href="javascript:void(0)"
+                      onclick="format('insertunorderedlist')"
+                      ><span class="fa fa-list fa-fw"></span
+                    ></a>
+                  </div>
 
-</body>
+                  <div class="editor" id="sampleeditor"></div>
 
-<!--Footer-->
-<footer></footer>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</html>
+                  <!-- <script>
+                    window.addEventListener("load", function () {
+                      document
+                        .getElementById("sampleeditor")
+                        .setAttribute("contenteditable", "true");
+                      document
+                        .getElementById("sampleeditor2")
+                        .setAttribute("contenteditable", "true");
+                    });
+
+                    function format(command, value) {
+                      document.execCommand(command, false, value);
+                    }
+
+                    function setUrl() {
+                      var url = document.getElementById("txtFormatUrl").value;
+                      var sText = document.getSelection
