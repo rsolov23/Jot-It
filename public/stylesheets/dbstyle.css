@@ -1,6 +1,6 @@
 /*background image style*/
 body {
-  background: url(./images/typewriter2.jpg) no-repeat center center fixed;
+  background: url(/assets/typewriter3.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,6 +12,13 @@ body {
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
   font-weight: bold;
+}
+.indent-1 {
+  float: left;
+}
+.indent-1 section {
+  width: 50%;
+  float: left;
 }
 /*makes span fault bold*/
 span {

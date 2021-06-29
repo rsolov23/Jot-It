@@ -1,8 +1,8 @@
 async function loginFormHandler(event) {
   event.preventDefault();
 
-  const username = document.getElementById("username-login").value;
-  const password = document.getElementById("password-login").value;
+  const username = document.getElementById("username-login").value.trim();
+  const password = document.getElementById("password-login").value.trim();
 
   if (username && password) {
     const response = await fetch("/api/users/login", {
@@ -25,8 +25,10 @@ async function loginFormHandler(event) {
 async function signupFormHandler(event) {
   event.preventDefault();
 
-  const username = document.getElementById("username-login").value;
-  const password = document.getElementById("password-login").value;
+  const username = document.getElementById("username-signup").value.trim();
+  const password = document.getElementById("password-signup").value.trim();
+  console.log("hello" + username);
+  console.log(password);
 
   if (username && password) {
     const response = await fetch("/api/users", {
