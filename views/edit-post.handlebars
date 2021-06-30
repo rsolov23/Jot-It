@@ -1,0 +1,50 @@
+<section id="create">
+  <div class="col-sm">
+    <div class="card" style="width: 42rem; opacity: 95%">
+      <div class="card-body" id="your-notes">
+        <div class="mb-3">
+          <label for="post-title" class="form-label">Update</label>
+          <input
+            type="text"
+            class="form-control"
+            id="post-title"
+            value="{{post.title}}"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm">
+    <div class="card" style="width: 42rem; opacity: 95%">
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="post-text" class="form-label"></label>
+          <div class="sample-toolbar">
+            <a href="javascript:void(0)" onclick="format('bold')"><span
+                class="fa fa-bold fa-fw"
+              ></span></a>
+            <a href="javascript:void(0)" onclick="format('italic')"><span
+                class="fa fa-italic fa-fw"
+              ></span></a>
+            <a
+              href="javascript:void(0)"
+              onclick="format('insertunorderedlist')"
+            ><span class="fa fa-list fa-fw"></span></a>
+          </div>
+
+          {{! <div class="editor" id="sampleeditor"></div> }}
+          <div class="form-group">
+            <label for="post-text"></label>
+            <textarea class="form-control" id="post-text" rows="3"></textarea>
+          </div>
+        </div>
+        {{! <button class="create-btn" id="create-post">Create</button> }}
+        <button class="post-btn" id="save-post">save</button>
+        <button class="post-btn" id="delete-post">delete</button>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/javascript/dashboard.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>

@@ -1,5 +1,6 @@
 async function newNoteHandler(event) {
   event.preventDefault();
+  console.log('clicked');
 
   const title = document.getElementById("post-title").value.trim();
   const post_text = document.getElementById("post-text").value.trim();
@@ -11,7 +12,7 @@ async function newNoteHandler(event) {
       post_text,
     }),
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   });
 

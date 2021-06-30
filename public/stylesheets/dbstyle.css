@@ -64,6 +64,10 @@ body:hover {
       font-size: 24;
     } */
 /*save button styles*/
+.post-btn {
+  background-color: #7b7a76;
+  float: right;
+}
 .save-btn {
   background-color: #7b7a76;
   float: right;
@@ -101,7 +105,7 @@ button:hover {
   padding-right: 15px;
 }
 /*toolbar style*/
-.editor {
+.form-group {
   border: solid 1px #ccc;
   padding: 20px;
   min-height: 200px;

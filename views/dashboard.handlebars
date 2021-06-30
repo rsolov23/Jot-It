@@ -20,14 +20,12 @@
         {{#if posts.length}}
         <ul id="myUL">
           {{#each posts as |post|}}
-          <li>
+          <li data-noteid={{post.id}}>
             <a
-              href="#"
+              href="/dashboard/edit/{{post.id}}"
               class="list-group-item list-group-item-action list-group-horizontal-xl"
-            >{{post.title}}<i class="fas fa-share-alt" id="share"></i><i
-                class="far fa-minus-square"
-                id="trash"
-              ></i></a>
+            >{{post.title}}
+            </a>
           </li>
           {{/each}}
         </ul>
@@ -75,10 +73,15 @@
                 ><span class="fa fa-list fa-fw"></span></a>
               </div>
 
-              <textarea class="editor" id="post-text"></textarea>
+              {{!-- <div class="editor" id="sampleeditor"></div> --}}
+              <div class="form-group">
+                <label for="post-text"></label>
+                <textarea class="form-control" id="post-text" rows="3"></textarea>
+              </div>
             </div>
-            <button class="save-btn" id="create-post">Create</button>
-            <button class="save-btn" id="save-post">save</button>
+            <button class="post-btn" id="create-post">Create</button>
+            {{!-- <button class="post-btn" id="delete-post">Delete</button> --}}
+            {{!-- <button class="post-btn" id="save-post">Save</button> --}}
           </div>
         </div>
       </div>
@@ -86,5 +89,6 @@
   {{!-- </section>
 </div> --}}
 <script src="/javascript/dashboard.js"></script>
-<script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/add-post.js"></script>
+{{!-- <script src="/javascript/edit-post.js"></script> --}}
+{{!-- <script src="/javascript/delete-post.js"></script> --}}
