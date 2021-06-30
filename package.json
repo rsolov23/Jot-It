@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/NathanaelWhite/academia-corner#readme",
   "dependencies": {
-    "@google-cloud/translate": "^6.2.2",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
     "dotenv": "^10.0.0",
