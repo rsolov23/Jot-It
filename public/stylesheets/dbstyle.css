@@ -96,7 +96,12 @@ button:hover {
   float: right;
 }
 /*delete icon positioning*/
-#trash {
+#delete-note {
+  float: right;
+  padding-right: 5px;
+}
+/* edit note icon positioning*/
+#edit-note {
   float: right;
   padding-right: 5px;
 }
