@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS jot_it_db;
+
+CREATE DATABASE jot_it_db;

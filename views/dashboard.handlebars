@@ -1,0 +1,95 @@
+<header>
+  <h1>Dashboard</h1>
+</header>
+<div class="notes">
+
+  <section class="indent-1">
+    <!-- Section 1 -->
+
+    <section id="note-title">
+      <div class="list-group-item">
+        <a
+          href="#"
+          class="list-group-item list-group-item-action list-group-horizontal-xl"
+        ><i class="fas fa-search" id="search"></i><input
+            type="text"
+            id="myInput"
+            onkeyup="myFunction()"
+            placeholder="Search"
+          /></a>
+        {{#if posts.length}}
+        <ul id="myUL">
+          {{#each posts as |post|}}
+          <li data-noteid={{post.id}}>
+            <a
+              href="/dashboard/edit/{{post.id}}"
+              class="list-group-item list-group-item-action list-group-horizontal-xl"
+            >{{post.title}}
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </div>
+
+    </section>
+
+    <!-- Section 2 -->
+    <section id="create">
+      <div class="col-sm">
+        <div class="card" style="width: 42rem; opacity: 95%">
+          <div class="card-body" id="your-notes">
+            <div class="mb-3">
+              <label for="post-title" class="form-label">Create a
+                New Note</label>
+              <input
+                type="text"
+                class="form-control"
+                id="post-title"
+                name="post-title"
+                placeholder="Title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 42rem; opacity: 95%">
+          <div class="card-body">
+            <div class="mb-3">
+              <label
+                for="post-text"
+                class="form-label"
+              ></label>
+              <div class="sample-toolbar">
+                <a href="javascript:void(0)" onclick="format('bold')"><span
+                    class="fa fa-bold fa-fw"
+                  ></span></a>
+                <a href="javascript:void(0)" onclick="format('italic')"><span
+                    class="fa fa-italic fa-fw"
+                  ></span></a>
+                <a
+                  href="javascript:void(0)"
+                  onclick="format('insertunorderedlist')"
+                ><span class="fa fa-list fa-fw"></span></a>
+              </div>
+
+              {{!-- <div class="editor" id="sampleeditor"></div> --}}
+              <div class="form-group">
+                <label for="post-text"></label>
+                <textarea class="form-control" id="post-text" rows="3"></textarea>
+              </div>
+            </div>
+            <button class="post-btn" id="create-post">Create</button>
+            {{!-- <button class="post-btn" id="delete-post">Delete</button> --}}
+            {{!-- <button class="post-btn" id="save-post">Save</button> --}}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{!-- </section>
+</div> --}}
+<script src="/javascript/dashboard.js"></script>
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
