@@ -1,3 +1,4 @@
+
 <header>
   <h1>Dashboard</h1>
 </header>
@@ -20,12 +21,17 @@
         {{#if posts.length}}
         <ul id="myUL">
           {{#each posts as |post|}}
-          <li data-noteid={{post.id}}>
+          <li class="list-item-note-id" data-note-id={{post.id}}>
             <a
               href="/dashboard/edit/{{post.id}}"
               class="list-group-item list-group-item-action list-group-horizontal-xl"
             >{{post.title}}
             </a>
+            <span>
+              <button onclick="shareNote()"  style="background-color: #7b7a76">Share</button>
+              <button onclick="editNote()" class="edit-post" data-post-id={{post.id}} style="background-color: #7b7a76">Edit</button>
+              <button onclick="deleteNote()" class="delete-post" style="background-color: #7b7a76">Delete</button>
+            </span>
           </li>
           {{/each}}
         </ul>

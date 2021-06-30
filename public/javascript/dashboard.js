@@ -19,9 +19,7 @@ function myFunction() {
 }
 
 window.addEventListener("load", function () {
-  document
-    .getElementById("post-text")
-    .setAttribute("contenteditable", "true");
+  document.getElementById("post-text").setAttribute("contenteditable", "true");
   // document
   //   .getElementById("sampleeditor2")
   //   .setAttribute("contenteditable", "true");
@@ -41,3 +39,48 @@ function setUrl() {
   );
   document.getElementById("txtFormatUrl").value = "";
 }
+
+async function deleteNote(event) {
+  event.preventDefault();
+
+  const id = document
+    .querySelector(".list-item-note-id")
+    .getAttribute("data-note-id");
+
+  const response = await fetch(`/api/posts/${id}`, {
+    method: "DELETE",
+  });
+
+  if (response.ok) {
+    document.location.replace("/dashboard");
+  } else {
+    alert(response.statusText);
+  }
+}
+
+document.querySelector(".delete-post").addEventListener("click", deleteNote);
+
+async function editNote(event) {
+  // event.preventDefault();
+
+  const testId = document
+    .querySelector(".edit-post")
+    .getAttribute("data-post-id");
+  debugger;
+  const id = event.target.getAttribute("data-post-id");
+
+  const response = await fetch(`/api/posts/${id}`);
+  const postData = await response.json();
+  const title = postData.title;
+  const post_text = postData.post_text;
+  debugger;
+  if (response.ok) {
+    //Not sure if we should change location or stay on same page and just say note submitted
+
+    document.location.replace("/dashboard");
+  } else {
+    alert(response.statusText);
+  }
+}
+
+document.querySelector(".edit-post").addEventListener("click", editNote);

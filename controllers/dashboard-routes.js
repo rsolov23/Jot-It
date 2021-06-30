@@ -8,7 +8,7 @@ const withAuth = require("../utils/auth");
 // GET route all posts if logged in
 router.get("/", withAuth, (req, res) => {
   console.log(req.session);
-  console.log('=====================');
+  console.log("=====================");
   Post.findAll({
     where: {
       user_id: req.session.user_id,
@@ -23,10 +23,10 @@ router.get("/", withAuth, (req, res) => {
   })
     .then((dbPostData) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("dashboard", { 
-        posts, 
+      res.render("dashboard", {
+        posts,
         loggedIn: true,
-        style: 'dbstyle.css' 
+        style: "dbstyle.css",
       });
     })
     .catch((err) => {
@@ -52,7 +52,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
         res.render("edit-post", {
           posts,
           loggedIn: req.session.loggedIn,
-          style: 'dbstyle.css'
+          style: "dbstyle.css",
         });
       } else {
         res.status(404).end();
