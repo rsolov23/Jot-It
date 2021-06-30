@@ -20,11 +20,11 @@ function myFunction() {
 
 window.addEventListener("load", function () {
   document
-    .getElementById("sampleeditor")
+    .getElementById("post-text")
     .setAttribute("contenteditable", "true");
-  document
-    .getElementById("sampleeditor2")
-    .setAttribute("contenteditable", "true");
+  // document
+  //   .getElementById("sampleeditor2")
+  //   .setAttribute("contenteditable", "true");
 });
 
 function format(command, value) {

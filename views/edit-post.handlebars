@@ -3,7 +3,7 @@
     <div class="card" style="width: 42rem; opacity: 95%">
       <div class="card-body" id="your-notes">
         <div class="mb-3">
-          <label for="post-title" class="form-label">Update</label>
+          <label for="post-title" class="form-label">Title</label>
           <input
             type="text"
             class="form-control"
@@ -35,7 +35,7 @@
           {{! <div class="editor" id="sampleeditor"></div> }}
           <div class="form-group">
             <label for="post-text"></label>
-            <textarea class="form-control" id="post-text" rows="3"></textarea>
+            <textarea class="form-control" id="post-text" rows="3">{{post.post_text}}</textarea>
           </div>
         </div>
         {{! <button class="create-btn" id="create-post">Create</button> }}
