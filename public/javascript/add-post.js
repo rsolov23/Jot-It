@@ -24,4 +24,4 @@ async function newNoteHandler(event) {
   }
 }
 
-document.getElementById("save-note").addEventListener("click", newNoteHandler);
+document.getElementById("create-note").addEventListener("click", newNoteHandler);
