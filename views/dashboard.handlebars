@@ -17,37 +17,19 @@
             onkeyup="myFunction()"
             placeholder="Search"
           /></a>
-
+        {{#if posts.length}}
         <ul id="myUL">
-          <li>
+          {{#each posts as |post|}}
+          <li data-noteid={{post.id}}>
             <a
-              href="#"
+              href="/dashboard/edit/{{post.id}}"
               class="list-group-item list-group-item-action list-group-horizontal-xl"
-            >Note 1<i class="fas fa-share-alt" id="share"></i><i
-                class="far fa-minus-square"
-                id="trash"
-              ></i></a>
+            >{{post.title}}
+            </a>
           </li>
-
-          <li>
-            <a
-              href="#"
-              class="list-group-item list-group-item-action list-group-horizontal-xl"
-            >test<i class="fas fa-share-alt" id="share"></i><i
-                class="far fa-minus-square"
-                id="trash"
-              ></i></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="list-group-item list-group-item-action list-group-horizontal-xl"
-            >sample 3<i class="fas fa-share-alt" id="share"></i><i
-                class="far fa-minus-square"
-                id="trash"
-              ></i></a>
-          </li>
+          {{/each}}
         </ul>
+        {{/if}}
       </div>
 
     </section>
@@ -58,12 +40,13 @@
         <div class="card" style="width: 42rem; opacity: 95%">
           <div class="card-body" id="your-notes">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Create a
+              <label for="post-title" class="form-label">Create a
                 New Note</label>
               <input
-                type="email"
+                type="text"
                 class="form-control"
-                id="exampleFormControlInput1"
+                id="post-title"
+                name="post-title"
                 placeholder="Title"
               />
             </div>
@@ -75,7 +58,7 @@
           <div class="card-body">
             <div class="mb-3">
               <label
-                for="exampleFormControlTextarea1"
+                for="post-text"
                 class="form-label"
               ></label>
               <div class="sample-toolbar">
@@ -91,22 +74,22 @@
                 ><span class="fa fa-list fa-fw"></span></a>
               </div>
 
-              <div class="editor" id="sampleeditor"></div>
+              {{!-- <div class="editor" id="sampleeditor"></div> --}}
+              <div class="form-group">
+                <label for="post-text"></label>
+                <textarea class="form-control" id="post-text" rows="3"></textarea>
+              </div>
             </div>
-            <button class="save-btn">Save</button>
+            <button class="post-btn" id="create-post">Create</button>
+            {{!-- <button class="post-btn" id="delete-post">Delete</button> --}}
+            {{!-- <button class="post-btn" id="save-post">Save</button> --}}
           </div>
-<<<<<<< HEAD
-        </section>
-      </section>
-    </div>
-  </body>
-=======
         </div>
       </div>
     </section>
   {{!-- </section>
 </div> --}}
 <script src="/javascript/dashboard.js"></script>
+<script src="/javascript/add-post.js"></script>
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
->>>>>>> feature/dashboard-handlebars

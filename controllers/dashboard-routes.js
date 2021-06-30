@@ -13,7 +13,7 @@ router.get("/", withAuth, (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    attributes: ["id", "title", "created_at"],
+    attributes: ["id", "title", "post_text", "created_at"],
     include: [
       {
         model: User,
@@ -36,7 +36,7 @@ router.get("/", withAuth, (req, res) => {
 });
 
 // GET route for one post to edit
-router.get("/edit/:id", (req, res) => {
+router.get("/edit/:id", withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: ["id", "title", "post_text", "created_at"],
     include: [
@@ -48,9 +48,9 @@ router.get("/edit/:id", (req, res) => {
   })
     .then((dbPostData) => {
       if (dbPostData) {
-        const post = dbPostData.get({ plain: true });
-        res.render("dashboard", {
-          post,
+        const posts = dbPostData.get({ plain: true });
+        res.render("edit-post", {
+          posts,
           loggedIn: req.session.loggedIn,
           style: 'dbstyle.css'
         });

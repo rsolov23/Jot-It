@@ -10,10 +10,12 @@ async function deleteFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard/");
+    document.location.replace("/dashboard");
   } else {
     alert(response.statusText);
   }
 }
 
-document.getElementById("delete-note").addEventListener("click");
+document
+  .getElementById("delete-post")
+  .addEventListener("click", deleteFormHandler);

@@ -5,9 +5,9 @@ const { Post, User } = require("../../models");
 // require authority
 const withAuth = require("../../utils/auth");
 //Twilio for sharing purposes maybe?
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require("twilio")(accountSid, authToken);
+// const accountSid = process.env.TWILIO_ACCOUNT_SID;
+// const authToken = process.env.TWILIO_AUTH_TOKEN;
+// const client = require("twilio")(accountSid, authToken);
 // GET route for all comments
 router.get("/", (req, res) => {
   Post.findAll({
@@ -59,7 +59,7 @@ router.post("/", withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
     post_text: req.body.post_text,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
@@ -114,14 +114,14 @@ router.delete("/:id", withAuth, (req, res) => {
     });
 });
 
-router.get("/share", (req, res) => {
-  let data = "This is a message";
+// router.get("/share", (req, res) => {
+//   let data = "This is a message";
 
-  client.messages
-    .create({ body: data, from: "+19734255288", to: "+18303856947" })
-    .then((message) => console.log(message));
+//   client.messages
+//     .create({ body: data, from: "+19734255288", to: "+18303856947" })
+//     .then((message) => console.log(message));
 
-  res.json("note title");
-});
+//   res.json("note title");
+// });
 // module exports
 module.exports = router;
