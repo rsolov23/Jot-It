@@ -90,6 +90,7 @@ btn.addEventListener("click", function () {
   var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   output.innerHTML = randomQuote;
 });
+
 function myFunction() {
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;
@@ -110,30 +111,8 @@ function myFunction() {
   }
 }
 
-window.addEventListener("load", function () {
-  document.getElementById("post-text").setAttribute("contenteditable", "true");
-  // document
-  //   .getElementById("sampleeditor2")
-  //   .setAttribute("contenteditable", "true");
-});
-
-function format(command, value) {
-  document.execCommand(command, false, value);
-}
-
-function setUrl() {
-  var url = document.getElementById("txtFormatUrl").value;
-  var sText = document.getSelection();
-  document.execCommand(
-    "insertHTML",
-    false,
-    '<a href="' + url + '" target="_blank" + "">' + sText + "</a>"
-  );
-  document.getElementById("txtFormatUrl").value = "";
-}
-
 async function deleteNote(event) {
-  event.preventDefault();
+  // event.preventDefault();
 
   const id = document
     .querySelector(".list-item-note-id")
@@ -152,35 +131,11 @@ async function deleteNote(event) {
 
 document.querySelector(".delete-post").addEventListener("click", deleteNote);
 
-async function editNote(event) {
-  // event.preventDefault();
-
-  const testId = document
-    .querySelector(".edit-post")
-    .getAttribute("data-post-id");
-  debugger;
-  const id = event.target.getAttribute("data-post-id");
-
-  const response = await fetch(`/api/posts/${id}`);
-  const postData = await response.json();
-  const title = postData.title;
-  const post_text = postData.post_text;
-  debugger;
-  if (response.ok) {
-    //Not sure if we should change location or stay on same page and just say note submitted
-
-    document.location.replace("/dashboard");
-  } else {
-    alert(response.statusText);
-  }
-}
-
-document.querySelector(".edit-post").addEventListener("click", editNote);
 // async function editNote(event) {
 //   // event.preventDefault();
 
 //   const testId = document
-//     .querySelector(".list-item-note-id")
+//     .querySelector(".edit-post")
 //     .getAttribute("data-post-id");
 //   debugger;
 //   const id = event.target.getAttribute("data-post-id");
@@ -200,3 +155,33 @@ document.querySelector(".edit-post").addEventListener("click", editNote);
 // }
 
 // document.querySelector(".edit-post").addEventListener("click", editNote);
+//
+async function editNote(event) {
+  event.preventDefault();
+
+  const title = document.getElementById("post-title").value.trim();
+  const post_text = document.getElementById("post-text").value.trim();
+
+  const id = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+  ];
+  const response = await fetch(`/api/posts/${id}`, {
+    method: "PUT",
+    body: JSON.stringify({
+      title,
+      post_text,
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  if (response.ok) {
+    //Not sure if we should change location or stay on same page and just say note submitted
+
+    document.location.replace("/dashboard");
+  } else {
+    alert(response.statusText);
+  }
+}
+
+document.getElementById(".edit-post").addEventListener("click", editNote);
