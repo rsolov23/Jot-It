@@ -140,7 +140,7 @@ button:hover {
 
 #container {
   background-color: #ececee;
-  border: 5px solid #424244;
+  border: 3px solid white;
   height: 125px;
   width: 750px;
   margin: 0 auto;
@@ -149,13 +149,9 @@ button:hover {
   border-radius: 2%;
 }
 
-/* #btn {
-  margin: 25px auto;
-  height: 25px;
-  width: 125px;
-  font-size: 15px;
-  background-color: #424244;
-} */
+#btn {
+  background-color: #7b7a76;
+}
 #output {
   color: #424244;
 }
