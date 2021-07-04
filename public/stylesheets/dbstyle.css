@@ -13,6 +13,9 @@ body {
     serif;
   font-weight: bold;
 }
+.music {
+  
+}
 .indent-1 {
   float: left;
 }
@@ -73,7 +76,9 @@ body:hover {
   float: right;
 }
 /*save button style*/
-button {
+button,
+#btn,
+.edit-post {
   transition: all 0.5s ease;
   color: #fff;
   border: 3px solid white;
@@ -135,4 +140,22 @@ button:hover {
 .ul {
   list-style-type: none;
   padding-left: 0%;
+}
+
+#container {
+  background-color: #ececee;
+  border: 3px solid white;
+  height: 125px;
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 95%;
+  border-radius: 2%;
+}
+
+#btn {
+  background-color: #7b7a76;
+}
+#output {
+  color: #424244;
 }

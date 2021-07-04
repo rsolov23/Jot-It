@@ -1,10 +1,19 @@
 
 <header>
   <h1>Dashboard</h1>
+  
 </header>
+<div class="d-flex justify-content-center pb-3">
+<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX889U0CL85jj?theme=0" width="25%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+<div id="container">
+  
+  <button id="btn">Press for a new quote </button>
+  <div id="output">Press button to generate a quote </div>
+</div>
 <div class="notes">
 
-  <section class="indent-1">
+ <section class="indent-1">
     <!-- Section 1 -->
 
     <section id="note-title">
@@ -28,9 +37,10 @@
             >{{post.title}}
             </a>
             <span>
-              <button onclick="shareNote()"  style="background-color: #7b7a76">Share</button>
-              <button onclick="editNote()" class="edit-post" data-post-id={{post.id}} style="background-color: #7b7a76">Edit</button>
-              <button onclick="deleteNote()" class="delete-post" style="background-color: #7b7a76">Delete</button>
+              {{!-- <button onclick="shareNote()"  style="background-color: #7b7a76">Share</button>
+              <a  href="/dashboard/edit/{{post.id}}" id="edit-post" class="edit-post" data-post-id={{post.id}} style="background-color: #7b7a76">Edit</a> --}}
+              
+              {{!-- <button onclick="deleteNote()" class="delete-post" style="background-color: #7b7a76">Delete</button> --}}
             </span>
           </li>
           {{/each}}
@@ -67,7 +77,7 @@
                 for="post-text"
                 class="form-label"
               ></label>
-              <div class="sample-toolbar">
+              {{!-- <div class="sample-toolbar">
                 <a href="javascript:void(0)" onclick="format('bold')"><span
                     class="fa fa-bold fa-fw"
                   ></span></a>
@@ -78,14 +88,81 @@
                   href="javascript:void(0)"
                   onclick="format('insertunorderedlist')"
                 ><span class="fa fa-list fa-fw"></span></a>
-              </div>
+              </div> --}}
 
               {{!-- <div class="editor" id="sampleeditor"></div> --}}
               <div class="form-group">
+             
                 <label for="post-text"></label>
-                <textarea class="form-control" id="post-text" rows="3"></textarea>
+                <textarea class="form-control" id="post-text" rows="5"></textarea>
               </div>
             </div>
+            {{!-- <style type="text/css">
+        #htmlEditor {
+            margin-bottom: 10px;
+        }
+        #feedback 
+        {
+            padding-left: 10px;
+            color: Red;
+        }
+        span.ui-icon.ui-icon-insert-email
+        {
+            background-image: url("/images/samples/html-editor/ui-icons_222222_256x240.png")!important; 
+            background-position: -192px -128px;
+        }
+		/* Override sample's browser styles */
+    	#htmlEditor h1, #htmlEditor h2, #htmlEditor h3, #htmlEditor h4, #htmlEditor h5, #htmlEditor h6 { margin: 0px; }
+    	#htmlEditor h1 { font-size: 1.9em; }
+		#sampleContainer { overflow: visible; }
+    </style>
+
+    <!--igHtmlEditor target element-->
+    <div id="htmlEditor" class="form-control form-group" id="post-text"></div>
+
+    <script>
+        $(function () {
+            var height = $('html').hasClass('touch') ? 500 : 350;
+            // initialize igHtmlEditor
+            var htmlEditor = $("#htmlEditor").igHtmlEditor({
+                width: "99%",
+                height: height,
+                inputName: "htmlEditor",
+                customToolbars: [
+                {
+                    name: "EmailSignature",
+                    collapseButtonIcon: "ui-igbutton-collapse",
+                    expandButtonIcon: "ui-igbutton-expand",
+                    items: [{
+                        name: "appendSignature",
+                        type: "button",
+                        handler: appendSignature,
+                        scope: this,
+                        props: {
+                            isImage: {
+                                value: false,
+                                action: '_isSelectedAction'
+                            },
+                            imageButtonTooltip: {
+                                value: "Insert e-mail signature",
+                                action: '_tooltipAction'
+                            },
+                            imageButtonIcon: {
+                                value: "ui-icon-insert-email",
+                                action: '_buttonIconAction'
+                            }
+                        }
+                    }]
+                }]
+            });
+        });
+
+        function appendSignature(ui) {
+            var currentContent = $("#htmlEditor").igHtmlEditor("getContent", "html");
+            var signature = "<p>Best regards,<br/>John Doe<br/>Acme Corp<br/>555-1111</p>";
+            $("#htmlEditor").igHtmlEditor("setContent", currentContent + signature, "html");
+        }
+    </script> --}}
             <button class="post-btn" id="create-post">Create</button>
             {{!-- <button class="post-btn" id="delete-post">Delete</button> --}}
             {{!-- <button class="post-btn" id="save-post">Save</button> --}}

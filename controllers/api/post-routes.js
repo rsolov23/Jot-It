@@ -1,3 +1,4 @@
+require("dotenv").config();
 // require router
 const router = require("express").Router();
 // require modals
@@ -5,9 +6,11 @@ const { Post, User } = require("../../models");
 // require authority
 const withAuth = require("../../utils/auth");
 //Twilio for sharing purposes maybe?
-// const accountSid = process.env.TWILIO_ACCOUNT_SID;
-// const authToken = process.env.TWILIO_AUTH_TOKEN;
-// const client = require("twilio")(accountSid, authToken);
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+console.log(accountSid);
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = require("twilio")(accountSid, authToken);
+
 // GET route for all comments
 router.get("/", (req, res) => {
   Post.findAll({
@@ -114,14 +117,18 @@ router.delete("/:id", withAuth, (req, res) => {
     });
 });
 
-// router.get("/share", (req, res) => {
-//   let data = "This is a message";
+// change to post = req.body
+// verify#
+// make share btn to db by id
+// get request note by idnote property in body instead of data
+router.get("/share", (req, res) => {
+  let data = "This is a message";
 
-//   client.messages
-//     .create({ body: data, from: "+19734255288", to: "+18303856947" })
-//     .then((message) => console.log(message));
+  client.messages
+    .create({ body: data, from: "+19734255288", to: "+18303856947" })
+    .then((message) => console.log(message));
 
-//   res.json("note title");
-// });
+  res.json("note title");
+});
 // module exports
 module.exports = router;
