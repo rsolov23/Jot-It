@@ -14,13 +14,13 @@ async function editFormHandler(event) {
       post_text,
     }),
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
   });
   if (response.ok) {
     //Not sure if we should change location or stay on same page and just say note submitted
 
-    document.location.replace('/dashboard');
+    document.location.replace("/dashboard");
   } else {
     alert(response.statusText);
   }

@@ -1,6 +1,7 @@
 async function deleteFormHandler(event) {
   event.preventDefault();
-
+  const title = document.getElementById("post-title").value.trim();
+  const post_text = document.getElementById("post-text").value.trim();
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];

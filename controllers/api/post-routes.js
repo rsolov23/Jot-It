@@ -1,3 +1,4 @@
+require("dotenv").config();
 // require router
 const router = require("express").Router();
 // require modals
@@ -6,8 +7,10 @@ const { Post, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 //Twilio for sharing purposes maybe?
 // const accountSid = process.env.TWILIO_ACCOUNT_SID;
+// console.log(accountSid);
 // const authToken = process.env.TWILIO_AUTH_TOKEN;
 // const client = require("twilio")(accountSid, authToken);
+
 // GET route for all comments
 router.get("/", (req, res) => {
   Post.findAll({
@@ -114,6 +117,10 @@ router.delete("/:id", withAuth, (req, res) => {
     });
 });
 
+// change to post = req.body
+// verify#
+// make share btn to db by id
+// get request note by idnote property in body instead of data
 // router.get("/share", (req, res) => {
 //   let data = "This is a message";
 

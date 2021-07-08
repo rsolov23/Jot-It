@@ -1,14 +1,30 @@
 <section id="create">
+  <style>
+    #create {width:200px; height:200px; position: fixed; top: 50%; left: 50%;
+    margin-top: -100px; margin-left: -350px; } body { background:
+    url(/assets/typewriter3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover; -moz-background-size: cover;
+    -o-background-size: cover; background-size: cover; height: 70%; color:
+    #424244; /* text-shadow: 1px 1px 1px #cfcfd1; */ background-color: #f8f8ff;
+    font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif; font-weight: bold; }
+  </style>
+
   <div class="col-sm">
     <div class="card" style="width: 42rem; opacity: 95%">
       <div class="card-body" id="your-notes">
         <div class="mb-3">
-          <label for="post-title" class="form-label">Title</label>
+          <label
+            for="post-title"
+            class="form-label"
+            style="color: #424244; font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
+    serif;"
+          >Title</label>
           <input
             type="text"
             class="form-control"
             id="post-title"
-            value="{{post.title}}"
+            value="{{posts.title}}"
           />
         </div>
       </div>
@@ -19,32 +35,58 @@
       <div class="card-body">
         <div class="mb-3">
           <label for="post-text" class="form-label"></label>
-          <div class="sample-toolbar">
-            <a href="javascript:void(0)" onclick="format('bold')"><span
-                class="fa fa-bold fa-fw"
-              ></span></a>
-            <a href="javascript:void(0)" onclick="format('italic')"><span
-                class="fa fa-italic fa-fw"
-              ></span></a>
-            <a
-              href="javascript:void(0)"
-              onclick="format('insertunorderedlist')"
-            ><span class="fa fa-list fa-fw"></span></a>
-          </div>
 
           {{! <div class="editor" id="sampleeditor"></div> }}
           <div class="form-group">
             <label for="post-text"></label>
-            <textarea class="form-control" id="post-text" rows="3">{{post.post_text}}</textarea>
+            <textarea
+              class="form-control"
+              id="post-text"
+              rows="3"
+              {{!-- placeholder="{{posts.post_text}}" --}}
+            >{{posts.post_text}}</textarea>
           </div>
         </div>
         {{! <button class="create-btn" id="create-post">Create</button> }}
-        <button class="post-btn" id="edit-post">save</button>
-        <button class="post-btn" id="delete-post">delete</button>
+        <button
+          class="post-btn"
+          id="edit-post"
+          style="
+                font-family:
+                Didot,
+                Didot
+                LT
+                STD,
+                Hoefler
+                Text,
+                Garamond,
+                Times
+                New
+                Roman,
+                serif;"
+        >Save</button>
+        <button
+          class="post-btn"
+          id="delete-post"
+          style="
+                font-family:
+                Didot,
+                Didot
+                LT
+                STD,
+                Hoefler
+                Text,
+                Garamond,
+                Times
+                New
+                Roman,
+                serif;"
+        >Delete</button>
       </div>
     </div>
   </div>
+  <footer></footer>
 </section>
-{{!-- <script src="/javascript/dashboard.js"></script> --}}
+{{! <script src="/javascript/dashboard.js"></script> }}
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
