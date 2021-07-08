@@ -1,4 +1,4 @@
-![A screenshot of the web page](/public/assets/ss2.png)
+![A screenshot of the web page](https://user-images.githubusercontent.com/20524736/124844104-0b52ef00-df59-11eb-9379-f22641e0c60e.png)
 
 <details open="open">
   <summary>Table of Contents</summary>
@@ -27,6 +27,8 @@
 
 ## About The Project
 
+A note taking website for anyone working on a project with the option to edit, save and delete any notes.
+
 ## Built With
 
 - [Bootstrap](https://getbootstrap.com)
@@ -35,10 +37,15 @@
 - [Sequelize](http://sequelize.org/)
 - [Express](https://expressjs.com/)
 - [MYSQL2](https://www.npmjs.com/package/mysql2)
+- [ESLint](https://www.npmjs.com/package/eslint)
 
 ## Instructions
 
+No instructions needed just go to our heroku link shown on the usage section below
+
 ## Usage
+
+https://jotitgood.herokuapp.com/
 
 ## Roadmap
 
