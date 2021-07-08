@@ -5,23 +5,15 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#instructions">Instructions</a>
-      <ul>
-        <li><a href="#prerequisites"></a></li>
-        <li><a href="#installation"></a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
-
   </ol>
 </details>
 
@@ -41,18 +33,22 @@ A note taking website for anyone working on a project with the option to edit, s
 
 ## Instructions
 
-No instructions needed just go to our heroku link shown on the usage section below
+No instructions needed just go to our heroku link shown on the usage section below.
 
 ## Usage
 
-https://jotitgood.herokuapp.com/
+Heroku link: https://jotitgood.herokuapp.com/
 
 ## Roadmap
 
 ## Contributing
+
+If you wish to contribute to this application feel free to contact any of the listed contributors.
 
 ## License
 
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## Acknowledgements
+
+UT Austin Coding Bootcamp.
