@@ -14,7 +14,6 @@ body {
   font-weight: bold;
 }
 .music {
-  
 }
 .indent-1 {
   float: left;
@@ -38,6 +37,7 @@ h1 {
   margin-top: 1%;
   padding-bottom: 15%;
   color: #424244;
+
   /* text-shadow: 1px 1px 1px #cfcfd1; */
 }
 /*hover text style*/
