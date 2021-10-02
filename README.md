@@ -40,7 +40,7 @@ As a User
 
 ### _**Link to Live App and Github Profile**_
 
-- [Heroku](https://jotitgood.herokuapp.com/)
+- [Heroku](https://jot-it-here.herokuapp.com/)
 - [Github](https://github.com/rsolov23/Jot-It)
 
 ### _**Contributions**_
