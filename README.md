@@ -1,27 +1,20 @@
-![License](https://img.shields.io/badge/License-MIT-blue)
 ![A screenshot of the web page](/public/assets/ss.png)
 
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-         <li><a href="#user-story">User Story</a></li>
-         <li> <a href="#instructions">Instructions</a></li>
-      </ul>
-    <li><a href="#heroku-link-and-github">Heroku Link and GitHub</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
+## **Table of Contents**
 
-## **About The Project**
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [User Story](#user-story)
+- [Instructions](#instructions)
+- [Link to Live App and Github Profile](#link-to-live-app-and-github-profile)
+- [Contributions](#contributions)
+- [License](#license)
+
+### _**About The Project**_
 
 Jot It is an inspirational application that will help you to jot down any notes you would like to keep track of.
 
-### _Built With_
+### _**Built With**_
 
 - [Bootstrap](https://getbootstrap.com)
 - [Javascript](https://jquery.com)
@@ -32,7 +25,7 @@ Jot It is an inspirational application that will help you to jot down any notes 
 - [VSCode](https://code.visualstudio.com/)
 - [ESLINT](https://www.npmjs.com/package/eslint)
 
-### _User Story_
+### _**User Story**_
 
 As a User
 
@@ -41,16 +34,16 @@ As a User
 <p>WHEN I click on login</p>
 <p>THEN I am presented with my dashboard and able to add, edit and delete past notes</p>
 
-## **Instructions**
+### _**Instructions**_
 
-- Screencastify Link with instructions (https://drive.google.com/file/d/1zXNlmBl39F9Ule7v5CuIPRPVQZBwrOdH/view)
+- [Screencastify Link with instructions](https://drive.google.com/file/d/1zXNlmBl39F9Ule7v5CuIPRPVQZBwrOdH/view)
 
-## **Heroku Link and GitHub**
+### _**Link to Live App and Github Profile**_
 
-- Heroku (https://jotitgood.herokuapp.com/)
-- Github (https://github.com/rsolov23/Jot-It)
+- [Heroku](https://jotitgood.herokuapp.com/)
+- [Github](https://github.com/rsolov23/Jot-It)
 
-## **Contributing**
+### _**Contributions**_
 
 Feel free to contribute to this project in any of the following ways:
 
@@ -59,6 +52,6 @@ Feel free to contribute to this project in any of the following ways:
 
 If you are interested in fixing issues directly to the code base, please reference the [How to Contribute](https://github.com/microsoft/vscode/wiki/How-to-Contribute) article.
 
-## **License**
+### _**License**_
 
 ![License](https://img.shields.io/badge/License-MIT-blue)
