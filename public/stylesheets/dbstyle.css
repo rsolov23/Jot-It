@@ -7,7 +7,7 @@ body {
   background-size: cover;
   height: 70%;
   color: #424244;
-  /* text-shadow: 1px 1px 1px #cfcfd1; */
+
   background-color: #f8f8ff;
   font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman,
     serif;
@@ -59,14 +59,7 @@ body:hover {
   background-color: #ececee;
   opacity: 95%;
 }
-/**/
-/* #your-notes {
-      text-align: center;
-      font-style: oblique;
-      font-weight: bolder;
-      font-size: 24;
-    } */
-/*save button styles*/
+
 .post-btn {
   background-color: #7b7a76;
   float: right;
